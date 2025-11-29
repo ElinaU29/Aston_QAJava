@@ -1,4 +1,4 @@
-public class Lesson1 {
+public class Lesson2 {
     public static void printThreeWords() {
         System.out.println("Orange");
         System.out.println("Banana");
