@@ -12,8 +12,11 @@ public class Product {
             this.date = date;
             this.manufacturer = manufacturer;
             this.country = country;
+        }    
+        public void showInfo() {
             System.out.println("Name: " + this.name + ", Price: " + this.price + ", Status: " + this.status + ", Date: " + this.date + ", Manufacturer: " + this.manufacturer + ", Country: " + this.country);
         }
+        
     
  }   
 

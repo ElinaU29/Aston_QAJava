@@ -47,7 +47,7 @@ public class Main3 {
         );
 
         for (Product product : productsArray) {
-            System.out.println(product.name + " " + product.price + " " + product.status + " " + product.date + " " + product.manufacturer + " " + product.country);
+            product.showInfo();
         }
 
         Park park = new Park(); 
