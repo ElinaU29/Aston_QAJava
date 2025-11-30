@@ -17,9 +17,18 @@ public class Main4 {
         catBarsik.feed(bowlMedium);
         dogSharik.feed(bowlMedium);
 
+        Cat[] catsArray = new Cat[4];
+        catsArray[0] = new Cat("Маркус");
+        catsArray[1] = new Cat("Элвис");
+        catsArray[2] = new Cat("Мася");
+        catsArray[3] = new Cat("Нэся");
+
         bowlMedium.pourFeed(5);
         bowlMedium.pourFeed(100);
-        dogSharik.feed(bowlMedium);
+
+        for (Cat cat : catsArray) {
+            cat.feed(bowlMedium);
+        }
 
         Animal humster = new Animal("Бульдозер");
 

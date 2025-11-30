@@ -29,21 +29,24 @@ public class Animal {
     
     public void isBellyful() {
         if (bellyful) {
-            System.out.println(name + " голоден(а)");
+            System.out.println(name + " сытый!");
         } else {
-            System.out.println(name + "сытый!");
+            System.out.println(name + " голоден(а)");
         }
     }
     
-    public boolean feed(Bowl bowl) {
-        if (bowl.feedAmount > feedAmount) {
-            bowl.feedAmount -= feedAmount;
-            bellyful =true;
-            System.out.println(name + " поел из миски, и теперь сытый(ая)!" + " В миске " + bowl.bowlInfo() + " корма");
-            return true;
+    public void feed(Bowl bowl) {
+        if (!bellyful) {
+            if (bowl.feedAmount > feedAmount) {
+                bowl.feedAmount -= feedAmount;
+                bellyful =true;
+                System.out.println(name + " поел из миски, и теперь сытый(ая)!" + " В миске " + bowl.bowlInfo() + " корма");
+            } else {
+                System.out.println(name + " не смог(ла) поесть из миски. Он(а) все еще голоден(а)!");
+            }
         } else {
-            System.out.println(name + " не смог(ла) поесть из миски. Он(а) все еще голоден(а)!");
-            return false;
+                System.out.println(name + " не голоден(а)!");
+
         }
     }
 

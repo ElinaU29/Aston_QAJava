@@ -1,6 +1,6 @@
 public class Bowl {
     public int feedAmount=0;
-    int maxFeed;
+    public int maxFeed;
 
     Bowl(int maxFeed) {
         this.maxFeed = maxFeed;
@@ -10,7 +10,7 @@ public class Bowl {
         feedAmount += pourAmount;
         if (feedAmount > maxFeed) {
             feedAmount = maxFeed;
-        };
+        }
         System.out.println("В миске " + feedAmount + " корма");
     }
 
