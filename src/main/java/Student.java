@@ -1,3 +1,4 @@
+package src.main.java;
 public class Student {
     public String name;
     public String group;

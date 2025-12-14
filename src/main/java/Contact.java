@@ -1,3 +1,4 @@
+package src.main.java;
 public class Contact {
     String name;
     String phone;
