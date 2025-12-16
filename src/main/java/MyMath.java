@@ -2,16 +2,22 @@ public class MyMath {
      
     public static long getFactorial(int number) {
 
-    long factorial = 1;
-     
-        for(int i = 1; i <= number; i++) {
-            factorial = i * factorial;
+        long factorial = 1;
+            
+        if (number >= 0) {
+            for(int i = 1; i <= number; i++) {
+                factorial = i * factorial;
+            }
+            return factorial;
+        } else {
+            throw new NegativeNumberException("Введено отрицательное число");
         }
-        return factorial;
     }
 
     public static double getTrianglePerimeter(double base, double height) {
-
+        if (base <= 0 || height <=0) {
+            throw new NegativeNumberException("Введено отрицательное или нулевое число");
+        }
         return base*height*0.5;
     }
 
